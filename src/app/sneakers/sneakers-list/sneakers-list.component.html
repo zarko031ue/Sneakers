@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12 mt-5 mb-5">
+        <button class="btn btn-success" (click)="onNewSneaker()">New</button>
+    </div>
+    <div class="col-md-12">
+         <div class="mb-4">
+            <button class="btn btn-primary" (click)="filter('')">All</button>  
+            <button class="btn btn-primary ml-1" (click)="filter('Men')" >Men's</button> 
+            <button class="btn btn-primary ml-1" (click)="filter('Woman')" >Women's</button>
+        </div>  
+        <div *ngIf="selectedCategory">
+            <app-sneakers-item
+            *ngFor="let sneaker of filterCategory | filter: searchKey : 'name' ; let i = index "
+            [sneaker]="sneaker"
+            [index]="i"
+            ></app-sneakers-item>
+        </div>
+        <div *ngIf="!selectedCategory">
+            <app-sneakers-item
+            *ngFor="let sneaker of sneakers | filter: searchKey : 'name'  ; let i = index"
+            [sneaker]="sneaker"
+            [index]="i"
+            ></app-sneakers-item>
+        </div>
+    </div>
+</div>

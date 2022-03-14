@@ -1,0 +1,9 @@
+<div class="card mb-5" style="width: 18rem;">
+    <img [src]="sneaker.imagePath" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{sneaker.name}}</p>
+      <p class="card-text">{{sneaker.price}} &#36;</p>
+      <a [routerLink]="['/sneakers', index]" class="btn btn-success">Shoes Details</a>
+    </div>
+</div>
+
