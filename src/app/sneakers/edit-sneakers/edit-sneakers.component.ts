@@ -6,10 +6,9 @@ import { SneakersService } from '../sneakers.service';
 @Component({
   selector: 'app-edit-sneakers',
   templateUrl: './edit-sneakers.component.html',
-  styleUrls: ['./edit-sneakers.component.css']
+  styleUrls: ['./edit-sneakers.component.css'],
 })
 export class EditSneakersComponent implements OnInit {
-
   editMode = false;
   id: number;
 
@@ -33,7 +32,7 @@ export class EditSneakersComponent implements OnInit {
     imagePath: ['', Validators.required],
     price: ['', Validators.required],
     name: ['', Validators.required],
-    category: ['', Validators.required],
+    category: ['Woman', Validators.required],
   });
 
   private initForm() {

@@ -1,5 +1,7 @@
 <nav class="navbar navbar-light bg-light">
     <form class="form-inline">
-      <input class="form-control mr-sm-2" name="searchTerm" [(ngModel)]="searchTerm" (keyup)="search($event)" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" name="searchTerm" [(ngModel)]="searchTerm" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-primary mr-1" type="button" (click)="onCityFilter()" >Search</button>
+      <button class="btn btn-danger" type="button" (click)="onCityFilterClear()">Clear</button>
     </form>
   </nav>

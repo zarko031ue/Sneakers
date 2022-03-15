@@ -13,11 +13,15 @@ export class HeaderComponent implements OnInit {
   constructor(private sneakersService: SneakersService) { }
 
   ngOnInit(): void {
+   
   }
 
-  search(event:any){
-    this.searchTerm = (event.target as HTMLInputElement).value
-    console.log(this.searchTerm);
+  onCityFilter(){
+    this.sneakersService.search.next(this.searchTerm)
+  }
+
+  onCityFilterClear() {
+    this.searchTerm = '';
     this.sneakersService.search.next(this.searchTerm);
   }
 
