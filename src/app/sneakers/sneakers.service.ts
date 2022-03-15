@@ -12,6 +12,7 @@ export class SneakersService {
   constructor() { }
   
   public sneakersChanged = new Subject<SneakersModel[]>();
+  public sneakersCha = new Subject<SneakersModel[]>();
   public search = new BehaviorSubject<string>("");
 
   private sneakers: SneakersModel[] = [{ 

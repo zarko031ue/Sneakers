@@ -33,6 +33,7 @@ export class SneakersListComponent implements OnInit, OnDestroy {
     );
 
     this.sneakers = this.sneakerService.getSnickers();
+    
     this.sneakerService.search.subscribe( val => {
       this.searchKey = val;
     })

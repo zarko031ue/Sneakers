@@ -12,6 +12,7 @@ import { EditSneakersComponent } from './sneakers/edit-sneakers/edit-sneakers.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './shared/filter.pipe';
 import { HeaderComponent } from './header/header.component';
+import { SortPipe } from './shared/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
     SneakersDetailsComponent,
     EditSneakersComponent,
     FilterPipe,
+    SortPipe,
    
   ],
   imports: [
